@@ -7,7 +7,7 @@
 
 
 
-for (let i = 1; i < 20; i++) {
+for (let i = 1; i <= 20; i++) {
     if (i % 3 == 0 && i % 5 == 0) {
         console.log("FizzBuzz")
     } else if (i % 3 == 0) {
@@ -18,3 +18,6 @@ for (let i = 1; i < 20; i++) {
         console.log(i)
     }
 }
+//== Compara si las variables tienen el mismo valor, sin importar el tipo de variable.
+//=== Compara el valor, y si el tipo de variable es igual en ambas variables se cumple la condición.
+//El triple === tiene en cuenta el tipo de dato
