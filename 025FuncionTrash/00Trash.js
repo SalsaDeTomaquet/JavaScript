@@ -7,4 +7,4 @@ function empezarTodo(a, b, myCallback) {
     myCallback();
 }
 
-empezarTodo(3, 4, callback);
+empezarTodo(3, 4, callback); ñ

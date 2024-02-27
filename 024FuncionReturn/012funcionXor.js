@@ -1,8 +1,8 @@
 function xor(boolean1, boolean2) {
     if (boolean1 == true ^ boolean2 != true) {
-        return "False";
+        return False;
     } else {
-        return "True";
+        return True;
     }
 }
 
