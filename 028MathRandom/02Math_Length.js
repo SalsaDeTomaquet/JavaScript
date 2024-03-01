@@ -20,7 +20,7 @@ let randomLetterInt = (a) => {
     let c = a[b];
     return c;
 }
-let randomLetter = randomLetterInt("Mariluz");
+let randomLetter = randomLetterInt("Roberto");
 console.log(randomLetter)
 
 //Dudas
