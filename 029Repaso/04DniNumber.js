@@ -13,3 +13,6 @@ let calcularLetraDni = (numberDni) => {
 }
 let c = calcularLetraDni(numberDni);
 console.log(c)
+
+alert("Hola jan")
+confirm

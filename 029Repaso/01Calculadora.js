@@ -3,8 +3,8 @@
 // Pasos para resolver el ejercicio:
 
 // 1. Recogida de datos: numero1, numero2, operador.Los datos que recogemos de un prompt siempre serán texto, así que si queremos utilizar números, utilizaremos:
-let numero1 = Number(prompt('Introduce un número'));
-let numero2 = Number(prompt('Introduce un número'));
+let numero1 = Number(prompt('Introduce un número 1'));
+let numero2 = Number(prompt('Introduce un número 2'));
 
 alert("Los numeros introducidos son: " + numero1 + " y " + numero2)
 let operacion = prompt("Que operación quieres hacer: '+, -, *, /'")
