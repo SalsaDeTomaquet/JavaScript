@@ -28,6 +28,11 @@ let player1 = true;
 while (!winner) {
     let num = Number(prompt("Introduce un numero del 0 al 8"))
     let player = player1 ? "X" : "O"
+    if (board[num] !== '_') {
+        alert("La posicion esta ocupada")
+        continue
+
+    }
     board[num] = player
     player1 = !player1
     if (hasGanado()) {
