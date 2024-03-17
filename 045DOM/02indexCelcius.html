@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+
+<body>
+    <label for="celcius">Grados centígrados:<input type="text" name="" id="celcius"></label><br>
+    <label for="fahrenheit">Grados Fahrenheit:<input type="text" name="" id="fahrenheit"></label><br>
+    <button>Calcular</button>
+    <script>
+        const calcular = () => {
+            const celcius = document.querySelector("#celcius").value;
+            const fahrenheit = document.querySelector("#fahrenheit");
+            fahrenheit.value = (celcius * 9 / 5) + 32
+        }
+
+        document.querySelector("button").addEventListener("click", calcular);
+    </script>
+</body>
+
+</html>
