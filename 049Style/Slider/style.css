@@ -1,0 +1,39 @@
+.slide {
+    width: 512px;
+    height: 512px;
+}
+
+.moc {
+    width: 512px;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.batman {
+    background-image: url(./img/img/tuxes/tuxes/PinguLinux_Sonic.png);
+
+
+}
+
+.bob {
+    background-image: url(./img/img/tuxes/tuxes/PinguLinux_Jack_Sparrow.jpg);
+
+
+}
+
+.captain {
+    background-image: url(./img/img/tuxes/tuxes/PinguLinux_Bob_Marley.png);
+
+}
+
+.slider {
+    display: flex;
+    width: 1536px;
+    transition: 1s;
+}
+
+.sliderContainer {
+    width: 512px;
+    height: 512px;
+    overflow: hidden;
+}
