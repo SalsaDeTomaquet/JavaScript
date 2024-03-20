@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p>
+        ¿Que super heroe es más fuerte?
+    <p><input type="radio" name="" id="">Batman</p>
+    <p><input type="radio" name="" id="" class="correcto">Superman</p>
+    </p>
+    <p>
+        ¿En qué consiste el sentido aracnido de Spiderman?
+    <p><input type="radio" name="" id="">Puede detectar cuando hay arañas cerca.</p>
+    <p><input type="radio" name="" id="" class="correcto">Puede detectar cuando hay un peligro cerca.</p>
+
+    </p>
+    <p>
+        ¿Que super heroe es más fuerte?
+    <p><input type="radio" name="" id="correcto">Peter Parker</p>
+    <p><input type="radio" name="" id="">Bruce Wayne</p>
+
+    </p>
+
+    <button>Pulsar</button>
+
+    <script>
+        const evaluateAnswers = () => {
+            document.querySelectorAll('input[type=radio]').forEach((input) => {
+                input.closest('p').style.backgroundColor = 'transparent';
+            });
+
+            document.querySelectorAll('input[type=radio]:checked').forEach((answer) => {
+                if (answer.classList.contains('correcto')) {
+                    answer.closest('p').style.backgroundColor = 'palegreen';
+                } else {
+                    answer.closest('p').style.backgroundColor = 'red';
+                }
+            });
+        }
+
+        document.querySelector('button').addEventListener('click', evaluateAnswers);
+    </script>
+</body>
+
+</html>
