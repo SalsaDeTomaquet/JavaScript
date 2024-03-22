@@ -1,0 +1,26 @@
+button {
+    width: 100px;
+    /* Ancho de cada botón */
+    height: 100px;
+    /* Altura de cada botón */
+    background-color: black;
+    border: none;
+    /* Elimina los bordes de los botones */
+    color: white;
+    /* Color del texto en los botones */
+    font-size: 24px;
+    /* Tamaño de fuente */
+    cursor: pointer;
+    /* Cambia el cursor al pasar sobre los botones */
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    /* Repite tres columnas de 100px de ancho cada una */
+    gap: 10px;
+    /* Espacio entre los botones */
+    width: 340px;
+    /* Ancho total de la cuadrícula (3 botones + 2 espacios entre ellos) */
+    margin: auto;
+}

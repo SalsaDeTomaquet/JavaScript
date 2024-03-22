@@ -1,0 +1,12 @@
+.secciones {
+    /* background-color: red; */
+    width: 300px;
+    border-radius: 10px;
+    border: solid black 2px;
+    margin: 10px;
+}
+
+span {
+    position: fixed;
+    right: 100px;
+}
