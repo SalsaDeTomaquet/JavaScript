@@ -1,48 +1,77 @@
+/* Establecemos las propiedades de caja por defecto y eliminamos el margen y el relleno */
 * {
     box-sizing: border-box;
     padding: 0;
     margin: 0;
+
 }
 
+/* Estilo para el contenedor principal */
 .container {
     margin: auto;
+    /* Centramos horizontalmente */
     width: 1100px;
+    /* Ancho fijo del contenedor */
     display: flex;
+    /* Usamos flexbox para alinear los elementos internos */
     flex-wrap: wrap;
+    /* Permitimos que los elementos se envuelvan si no caben en una sola fila */
 }
 
-.link a {
+/* Estilo para los botones dentro del contenedor .link */
+.link button {
     text-decoration: none;
+    /* Quitamos la subrayado de los botones */
     color: black;
+    /* Color de texto */
 }
 
+/* Estilo común para todas las cajas */
 .box {
     width: 150px;
+    /* Ancho de las cajas */
     height: 150px;
+    /* Alto de las cajas */
     transition: 1s;
+    /* Transición suave durante 1 segundo */
     margin: 10px;
+    /* Margen exterior */
 }
 
-.box.gray {
+/* Estilo específico para cajas de color verde */
+.box.green {
     background-color: greenyellow;
+    /* Color de fondo */
     border: solid 2px black;
+    /* Borde sólido de 2 píxeles de color negro */
 }
 
-.box.blue {
+/* Estilo específico para cajas de color púrpura */
+.box.purple {
     background-color: purple;
+    /* Color de fondo */
     border: solid 2px black;
+    /* Borde sólido de 2 píxeles de color negro */
 }
 
-.box.orange {
+/* Estilo específico para cajas de color amarillo */
+.box.yellow {
     background-color: yellow;
+    /* Color de fondo */
     border: solid 2px black;
+    /* Borde sólido de 2 píxeles de color negro */
 }
 
+/* Estilo para elementos ocultos */
 .disabled {
     width: 0;
+    /* Ancho 0 */
     height: 0;
+    /* Alto 0 */
     opacity: 0;
+    /* Opacidad 0 (oculto) */
     visibility: hidden;
+    /* Visibilidad oculta */
     margin: 0;
-
+    /* Margen 0 */
 }
