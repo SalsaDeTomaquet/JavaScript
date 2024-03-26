@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Randomizar Frases</title>
+</head>
+
+<body>
+    <div id="fraseSuperior"></div>
+    <div id="fraseInferior"></div>
+    <button id="corregir">Corregir</button>
+
+    <script>
+        let frases = "soy el mejor, no soy el mejor, ella es mejor, vosotros sois mejores";
+        let arrFrases = frases.split(",");
+
+        // Función para randomizar un array
+        function randomizarArray(array) {
+            for (let i = array.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                [array[i], array[j]] = [array[j], array[i]];
+            }
+            return array;
+        }
+
+        // Seleccionar una frase aleatoria
+        let fraseAleatoria = arrFrases[Math.floor(Math.random() * arrFrases.length)];
+
+        // Convertir la frase en un array de palabras
+        let palabras = fraseAleatoria.split(" ");
+
+        // Desordenar las palabras
+        palabras = randomizarArray(palabras);
+
+        // Mostrar las palabras en la parte superior
+        const fraseSuperior = document.getElementById("fraseSuperior");
+        palabras.forEach(palabra => {
+            const button = document.createElement("button");
+            button.textContent = palabra;
+            button.classList.add("button");
+            button.addEventListener("click", () => {
+                const fraseInferior = document.getElementById("fraseInferior");
+                const palabraPulsada = button.textContent;
+                fraseInferior.textContent += palabraPulsada + " ";
+                button.style.display = "none"; // Ocultar el botón después de mover la palabra
+            });
+            fraseSuperior.appendChild(button);
+        });
+
+        // Evento para corregir la frase
+        document.getElementById("corregir").addEventListener("click", () => {
+            const fraseSuperior = document.getElementById("fraseSuperior").textContent.trim();
+            const fraseInferior = document.getElementById("fraseInferior").textContent.trim();
+            if (fraseSuperior === fraseInferior) {
+                alert("¡Correcto! Las frases coinciden.");
+            } else {
+                alert("Incorrecto. Las frases no coinciden.");
+            }
+        });
+    </script>
+</body>
+
+</html>

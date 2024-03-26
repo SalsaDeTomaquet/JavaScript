@@ -1,0 +1,54 @@
+<input type="text" id="letter">
+<p class="hiddenWord"></p>
+<button>Evaluar</button>
+<div class="tries"></div>
+
+<div class="img"
+    style="background-image:url(https://pablomonteserin.com/wp-content/uploads/2020/05/hangman-game_pm-1024x212.png); width:200px; height:220px; background-color:red">
+</div>
+
+<script>
+
+    const replaceAt = (string, character, index) => {
+        return string.substring(0, index) + character + string.substring(index + character.length);
+    }
+    const words = ['casa', 'perro', 'gato', 'amor']
+    const secretWord = words[Math.floor(Math.random() * words.length)];
+    const secretWordArr = secretWord.split('');
+    // console.log(secretWordArr)
+    let hiddenWord = secretWord.replace(/./g, "_ ");
+    let tries = 0;
+    // const hiddenWordArr = hiddenWord.split('_ ')
+
+    document.querySelector('.hiddenWord').innerHTML = hiddenWord;
+
+
+    document.querySelector('button').addEventListener('click', () => {
+        const letter = document.querySelector('#letter').value;
+
+        // secretWordArr.forEach(l => {
+        //     if (l === letter) {
+
+        //     }
+        // })
+        let match = false;
+        for (let i = 0; i < secretWord.length; i++) {
+            if (secretWord[i] === letter) {
+                match = true;
+                hiddenWord = replaceAt(hiddenWord, letter, i * 2);
+            }
+        }
+        document.querySelector('.hiddenWord').innerHTML = hiddenWord;
+
+        if (!hiddenWord.includes('_')) {
+            alert('muy bien')
+        }
+
+        if (!match) {
+            tries++;
+            document.querySelector('.tries').innerHTML = tries;
+            document.querySelector('.img').style.backgroundPosition = -tries * 200 + 'px'
+        }
+
+    })
+</script>

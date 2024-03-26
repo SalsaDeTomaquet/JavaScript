@@ -2,16 +2,35 @@
     margin: 0;
     padding: 20px;
     box-sizing: border-box;
-    text-transform: uppercase
+    text-transform: uppercase;
+    font-family: 'random';
+}
+
+@font-face {
+    font-family: 'random';
+    src: url(./font/Poppins-Regular.ttf);
 }
 
 .container {
-    width: 500px;
+    width: 800px;
     margin: auto;
     border: 1px solid black;
     /* background-color: red; */
+
 }
 
 p {
     padding: 20px;
+}
+
+.slide {
+    width: 280px;
+    height: 300px;
+    /* overlay: hidden; */
+}
+
+.pablo {
+    background-image: url(./img/hangman-game_pm-1024x212.png);
+    background-repeat: no-repeat;
+    background-size: cover;
 }
